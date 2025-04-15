@@ -117,8 +117,8 @@ const onRowClick = (issue_id) => {
             icon={<PlusCircleOutlined />}
             type="primary"
             style={{
-              insetInlineEnd: 34,
-              bottom: 100,
+              insetInlineEnd: 25,
+              bottom: 80,
               width: "50px", // ปรับขนาดปุ่มใหญ่ขึ้น
               height: "50px",
             }}

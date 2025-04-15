@@ -47,7 +47,7 @@ function Navbar(props) {
           <p>วันที่ : {currentDateTime}</p>
         </div> */}
 
-        <div className="absolute top-4 right-3 text-sm text-right">
+        <div className="absolute top-1 right-1 text-sm text-right">
           <p>วันที่ : {currentDateTime.split(" ")[0]} {currentDateTime.split(" ")[1]} {currentDateTime.split(" ")[2]}</p>
           <p>เวลา : {currentDateTime.split(" ")[4]}</p>
         </div>
