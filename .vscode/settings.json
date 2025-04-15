@@ -1,0 +1,56 @@
+{
+    "editor.mouseWheelZoom": true,
+     "git.confirmSync": false,
+     "git.autofetch": true,
+     "git.enableSmartCommit": true,
+     "[vue]": {
+         "editor.defaultFormatter": "esbenp.prettier-vscode"
+     },
+     "[javascript]": {
+         "editor.defaultFormatter": "esbenp.prettier-vscode"
+     },
+     "[typescript]": {
+         "editor.defaultFormatter": "esbenp.prettier-vscode"
+     },
+     "[json]": {
+         "editor.defaultFormatter":
+          "esbenp.prettier-vscode"
+     },
+     "[html]": {
+         "editor.defaultFormatter": "esbenp.prettier-vscode"
+     },
+     "prettier.tabWidth": 2,
+     "github.copilot.preferredAccount": "Suwimonchaiyo",
+     "editor.defaultFormatter": "esbenp.prettier-vscode",
+     "github.copilot.advanced": {},
+     "editor.defaultFoldingRangeProvider": "GitHub.copilot",
+     "notebook.defaultFormatter": "GitHub.copilot",
+     "github.copilot.enable": {
+         "*": true,
+         "plaintext": false,
+         "markdown": false,
+         "scminput": false,
+         "typescript": true
+     },
+     "codesnap.containerPadding": "1em",
+     "editor.minimap.enabled": false,
+     "editor.formatOnSave": true,
+     "files.autoSave": "onWindowChange",
+     "prettier.requireConfig": true,
+     "editor.tabSize": 2,
+   "editor.insertSpaces": true,
+   "terminal.integrated.mouseWheelZoom": true,
+   "window.zoomLevel": 0.5,
+   "workbench.settings.applyToAllProfiles": [
+       "terminal.integrated.fontSize"
+   ],
+   "material-icon-theme.folders.associations": {},
+   "workbench.iconTheme": "material-icon-theme",
+   "terminal.integrated.fontWeight": "normal",
+   "vscode-pets.petColor": "magical",
+   "vscode-pets.throwBallWithMouse": true,
+   "vscode-pets.petType": "fox",
+   "vscode-pets.petSize": "medium",
+   "vscode-pets.theme": "forest",
+   "terminal.integrated.fontSize": 11,
+   }
