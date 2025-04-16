@@ -18,7 +18,6 @@ function CountHistoryPage() {
   const [totalCount, setTotalCount] = useState({});
   const [shelfProducts, setShelfProducts] = useState([]);
   const [countProduct, setCountProduct] = useState([]);
-  const [currentDateTime, setCurrentDateTime] = useState("");
   const formattedRound = formatRoundInThai(totalCount.round);
   const handleChange = (e) => {
     setSelectedOption(e.target.value);
@@ -62,14 +61,14 @@ function CountHistoryPage() {
   
   return (
     <div>
-      <Navbar page="/menu" title="ประวัติการนับ" />
+      <Navbar page="/menu" title="ประวัติการนับสินค้า" />
       <div className="flex flex-col justify-center items-center mt-4 space-y-2">
         
-        <p className="text-lg">
+        <p className="text">
           จำนวนสินค้าที่นับไปแล้ว : {totalCount.totalCountCounted}
         </p>
 
-        <p className="text-lg">{formattedRound}</p>
+        <p className="text">{formattedRound}</p>
 
         <div className="w-[300px] mt-4 bg-white border shadow p-3 rounded-md">
           <FormControl fullWidth variant="outlined">
@@ -135,7 +134,7 @@ function CountHistoryPage() {
               </div>
             ))
           ) : (
-            <p className="text-gray-600 text-center">No data available</p>
+            <p className="text-gray-600 text-center">ไม่มีข้อมูลการนับสินค้า</p>
           )}
         </div>
 
@@ -144,7 +143,7 @@ function CountHistoryPage() {
 
       <Navigation
         navi1="นับสินค้า"
-        navi2="ประวัติการนับ"
+        navi2="ประวัติการนับสินค้า"
         page1="/amount"
         page2="/count_history"
         color2="bg-[#06A1FB] rounded-tr-2xl rounded-tl-2xl rounded-bl-2xl"

@@ -76,7 +76,7 @@ const onRowClick = (issue_id) => {
           className="shadow-lg border"
         >
           <div className="max-h-[420px] overflow-y-auto p-2">
-            {Array.isArray(allProb) &&
+            {Array.isArray(allProb) && allProb.length > 0 ? (
               allProb.map((prob) => (
                 <div
                   key={prob.id}
@@ -92,6 +92,7 @@ const onRowClick = (issue_id) => {
                     }}
                   >
                     <p>อุปกรณ์ : {prob.prob_item_name}</p>
+                    <p>วันและเวลาที่แจ้ง : {formatDateInThai(prob.create_date)}</p>
                     <b>
                       สถานะ :
                       <span
@@ -102,10 +103,13 @@ const onRowClick = (issue_id) => {
                         {prob.prob_status}
                       </span>
                     </b>
-                    <p>วันและเวลาที่แจ้ง : {formatDateInThai(prob.create_date)}</p>
+                    
                   </Card>
                 </div>
-              ))}
+              ))
+            ) : (
+              <p className="font-sans text-gray-400 text-center">ไม่มีข้อมูล</p>
+            )}
           </div>
         </Card>
       </div>

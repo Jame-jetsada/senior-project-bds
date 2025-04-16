@@ -114,12 +114,9 @@ const handleConfirm = async () => {
 
   return (
     <div>
-      <Navbar page="/all_issue" title="แจ้งปัญหา" />
-      <div className="mt-4 text-center">
-        <h2>รายละเอียดการแจ้งปัญหา</h2>
-      </div>
+      <Navbar page="/all_issue" title="รายละเอียดการแจ้งปัญหา" />
 
-      <div className="mx-auto mt-4 py-3 p-3 bg-gray-300 rounded-md w-64">
+      <div className="mx-auto mt-4 p-5 bg-gray-300 rounded-md w-80">
         <div className="items-start space-y-2">
           <b>ชื่อปัญหา:</b>
           <p className="px-4"> {problem.prob_name}</p>
