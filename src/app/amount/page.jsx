@@ -131,6 +131,7 @@ function InputPage() {
               <input
                 className="w-full p-2 border border-gray-300 my-3 rounded-xl text-lg focus:border-blue-500"
                 type="text"
+                inputMode="numeric"
                 placeholder="กรุณาใส่รหัสสินค้า"
                 value={productCode}
                 id="productCode"
