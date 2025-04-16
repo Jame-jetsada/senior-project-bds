@@ -65,7 +65,7 @@ function InputPage() {
 
   const onSubmit = (event) => {
     event.preventDefault();
-    if (productCode && selectedOption) {
+    if (productCode || selectedOption) {
       const item_id = productCode;
       router.push(
         `/count/${item_id}?shelf=${selectedOption}&barcode=${productCode}`
@@ -193,26 +193,6 @@ function InputPage() {
               </div>
             </div>
           </form>
-
-          {/* {isScanning && (
-            <QrBarcodeScanner
-              onUpdate={(err, result) => {
-                if (result) {
-                  handleScan(result.text); // ใช้ข้อมูลที่สแกน
-                } else if (err) {
-                  handleError(err);
-                }
-              }}
-              style={{
-                width: "100%",
-                height: "100%",
-                position: "absolute",
-                top: 0,
-                left: 0,
-                zIndex: 9999,
-              }} // ใช้ zIndex เพื่อให้กล้องอยู่ด้านหน้า
-            />
-          )} */}
 
           {isScanning && (
             <div className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50 z-50">

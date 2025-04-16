@@ -13,48 +13,47 @@ function Navbar(props) {
     router.push(page);
   };
 
-  const [currentDateTime, setCurrentDateTime] = useState("");
+  const [currentDateTime, setCurrentDateTime] = useState({ date: "", time: "" });
 
   useEffect(() => {
       const updateTime = () => {
         const now = new Date();
-        const formatted = now.toLocaleString("th-TH", {
-          year: "numeric",
-          month: "long",
+
+        const date = now.toLocaleDateString("th-TH", {
+          year: "2-digit",
+          month: "short",
           day: "numeric",
+        });
+
+        const time = now.toLocaleTimeString("th-TH",{
           hour: "2-digit",
           minute: "2-digit",
-          second: "2-digit",
+          
         });
-        setCurrentDateTime(formatted);
+        setCurrentDateTime({ date, time });
       };
   
       updateTime();
       const interval = setInterval(updateTime, 1000); // อัปเดตทุกวินาที
-  
       return () => clearInterval(interval);
-    }, []);
+  }, []);
   
 
   return (
     <div>
-      <nav className="bg-[#5ABCF5] text-lg text-white p-6 relative">
+      <nav className="bg-[#5ABCF5] text-lg text-white p-5 relative">
         <div className="container mx-auto flex justify-center relative">
           <div className="text-center">{title}</div>
         </div>
 
-        {/* <div className="absolute top-4 right-3 text-sm">
-          <p>วันที่ : {currentDateTime}</p>
-        </div> */}
-
-        <div className="absolute top-4 right-3 text-sm text-right">
-          <p>วันที่ : {currentDateTime.split(" ")[0]} {currentDateTime.split(" ")[1]} {currentDateTime.split(" ")[2]}</p>
-          <p>เวลา : {currentDateTime.split(" ")[4]}</p>
+        <div className="absolute top-1 right-1 text-sm text-right">
+          <p>วันที่ : {currentDateTime.date}</p>
+          <p>เวลา : {currentDateTime.time}</p>
         </div>
 
 
         <div
-            className="absolute text-white text-4xl top-3 left-5 cursor-pointer"
+            className="absolute text-white text-4xl top-2 left-2 cursor-pointer"
             onClick={() => goToPage(page)} 
           >
             <svg
