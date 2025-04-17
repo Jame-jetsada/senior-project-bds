@@ -182,7 +182,7 @@ const uploadFilesAsync = async (filesToUpload) => {
       return;
     }
     if (files.length === 0) {
-      message.error("กรุณาแนบรูปภาพหรือวิดีโออย่างน้อย 1 ไฟล์");
+      message.error("กรุณาแนบรูปภาพอย่างน้อย 1 ไฟล์");
       return;
     }
   
@@ -278,7 +278,7 @@ const uploadFilesAsync = async (filesToUpload) => {
           />
 
           <div className="mt-4">
-            <label className="block mb-2">แนบรูป​และวิดีโอ {files.length}/3</label>
+            <label className="block mb-2">แนบรูป​ {files.length}/3</label>
             <div className="flex items-center">
               <input
                 type="file"
