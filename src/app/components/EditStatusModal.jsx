@@ -126,7 +126,7 @@ const EditStatusModal = ({ param, open, onCancel, onOk }) => {
             </Col>
 
             <Col span={12}>
-              <strong>รูปและวิดีโอ </strong> 
+              <strong>รูปภาพ </strong> 
               <div className="flex flex-wrap ">
                 {data?.prob_image?.map((image, index) => (
                   <Image

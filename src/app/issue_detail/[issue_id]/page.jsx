@@ -130,7 +130,7 @@ const handleConfirm = async () => {
           <b>รายละเอียด:</b>
           <p className="px-4"> {problem.prob_detail}</p>
 
-          <b>รูปและวิดีโอ: </b>
+          <b>รูปภาพ: </b>
            <div className="px-4 flex items-center space-x-4">
               {Array.isArray(problem.prob_image) && problem.prob_image.length > 0 ? (
                 problem.prob_image.map((image, index) => (
