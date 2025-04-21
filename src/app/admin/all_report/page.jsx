@@ -16,7 +16,7 @@ import dayjs from "dayjs";
 
 function AllReport() {
   const [search, setSearch] = useState();
-  const [startDate, setStartDate] = useState(dayjs().format("YYYY-MM-DD"));
+  const [startDate, setStartDate] = useState(dayjs().subtract(1, "day").format("YYYY-MM-DD"));
   const [endDate, setEndDate] = useState(dayjs().format("YYYY-MM-DD"));
   const [page, setPage] = useState(1); 
   const [rowsPerPage, setRowsPerPage] = useState(10); 
@@ -203,11 +203,16 @@ function AllReport() {
               <span className="text-[#50B0E9]">สถานะ</span>
 
               <Select className="w-full h-full" 
+              allowClear
               onChange={(value) => onStatusChange(value)}
               >
+              <Select.Option value="">ทั้งหมด</Select.Option> 
               {problemStatus &&
-                Object.entries(problemStatus).map(([value, label]) => (
-                <Select.Option key={value} value={label}>
+                Object.entries(problemStatus)
+                .filter(([key]) => key !== "ALL") 
+                .map(([value, label]) => (
+                <Select.Option key={label} value={label}>
+                  
                   {label}
                   </Select.Option>
                   ))}

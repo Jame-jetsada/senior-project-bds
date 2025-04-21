@@ -26,6 +26,10 @@ function Menubar() {
           label: "รายงาน",
           href: "/admin/dashboard",
         },
+        {
+          label: "export สินค้าที่นับ",
+          href: "/admin/export",
+        },
       ],
    
     },

@@ -26,7 +26,8 @@
     "react-qr-barcode-scanner": "^2.0.0",
     "react-query": "^3.39.3",
     "recharts": "^2.15.2",
-    "sweetalert2": "^11.14.3"
+    "sweetalert2": "^11.14.3",
+    "xlsx": "^0.18.5"
   },
   "devDependencies": {
     "@types/node": "22.7.5",

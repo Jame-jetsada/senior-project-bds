@@ -139,3 +139,45 @@ export async function getDashboard(date: string) {
     return error;
   }
 }
+
+export async function getSiteAll(){
+  try {
+    const result = await axios.get(`/project-v0/inspection-round/get-site-all`);
+    return result.data;
+  } catch (error) {
+    return error;
+  }
+}
+
+export async function getInspectionRoundAll(){
+  try {
+    const result = await axios.get(`/project-v0/inspection-round/get-inspection-round-all`);
+    return result.data;
+  } catch (error) {
+    return error;
+  }
+}
+
+export async function exportInspectionRound(inspection_code: string, site_id: string) {
+  try {
+    const result = await axios.get(`/reports/reports-count-product`, {
+      params: {
+        site_id: site_id,
+        inspection_code: inspection_code,
+      },
+      responseType: "blob",
+    });
+    return result; 
+  } catch (error) {
+    throw error; 
+  }
+}
+
+export async function getDashboardCountProduct(body: any) {
+  try {
+    const result = await axios.post(`/project-v0/inspection-round/get-dashboard-count-product`,body);
+    return result.data;
+  } catch (error) {
+    return error;
+  }
+} 

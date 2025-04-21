@@ -143,12 +143,17 @@ function InputPage() {
             </div>
 
             <button
-              type="submit"
-              className="w-full bg-white text-[#5ABCF5] hover:text-white font-semibold py-3 rounded-xl hover:bg-[#5ABCF5] border-2 border-[#5ABCF5] duration-75 transition"
-              onClick={onSubmit}
-            >
-              ยืนยัน
-            </button>
+            type="submit"
+            className={`w-full font-semibold py-3 rounded-xl border-2 duration-75 transition 
+              ${productCode
+                ? "bg-white text-[#5ABCF5] hover:text-white hover:bg-[#5ABCF5] border-[#5ABCF5]"
+                : "bg-gray-200 text-gray-400 border-gray-300 cursor-not-allowed"
+              }`}
+            onClick={onSubmit}
+            disabled={!productCode}
+          >
+            ยืนยัน
+          </button>
 
             <div className="relative">
               <div className="overflow-y-auto max-h-60 rounded-lg mt-3">

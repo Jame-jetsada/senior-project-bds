@@ -142,10 +142,10 @@ const EditStatusModal = ({ param, open, onCancel, onOk }) => {
                 <Form.Item name="prob_status" label="สถานะ">
                   <Select placeholder="Select Status" loading={loading}>
                     {allStatus &&
-                      Object.entries(allStatus).map(([value, label]) => (
-                        <Select.Option key={value} value={label}>
-                          {label}
-                        </Select.Option>
+                      Object.entries(allStatus)
+                        .filter(([value]) => value !== "ALL")
+                        .map(([value, label]) => (
+                          <Select.Option key={value} value={label}></Select.Option>
                       ))}
                   </Select>
                 </Form.Item>
