@@ -262,6 +262,7 @@ function Dashboard() {
           rowKey={(record) => record._id}
           columns={columns}
           dataSource={dashboardData}
+          pagination={false}
         />
       </div>
     </div>
